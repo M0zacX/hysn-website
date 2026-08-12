@@ -14,7 +14,7 @@ function SiteFooter() {
       <div style={{ maxWidth: 'var(--max-width-content)', margin: '0 auto', padding: 'var(--space-9) var(--gutter-page) var(--space-5)' }}>
         <div data-rv style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr)', gap: 'var(--space-8)', alignItems: 'start' }} data-grid="footer">
           <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)', alignItems: 'flex-start' }}>
-            <Wordmark variant="white" height={30} base="../.." />
+            <Wordmark variant="white" height={30} base="" />
             <p style={{ margin: 0, fontSize: 'var(--text-body)', lineHeight: 'var(--leading-body)', color: 'rgba(255,255,255,.6)', maxWidth: '34ch' }}>Digital Signage Menüboards für die Gastronomie. Ändern. Speichern. Fertig.</p>
             <a className="f-cta" href="#aktion" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 'var(--text-body-sm)', letterSpacing: '.08em', textTransform: 'uppercase', marginTop: 4 }}>
               <span className="live-dot" style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--amber-500)', boxShadow: '0 0 8px var(--amber-500)' }}></span>

@@ -31,9 +31,9 @@ function ScreenPanel({ src, alt }) {
 function OfferBoard() {
   return (
     <div style={{ display: 'flex', gap: 'clamp(5px,0.6vw,9px)', alignItems: 'stretch' }}>
-      <ScreenPanel src="../../assets/imagery/site/board-pizza.png" alt="Pizza- und Dessert-Menü auf einem vertikalen HYSN Menüboard" />
-      <ScreenPanel src="../../assets/imagery/site/board-drinks.png" alt="Drinks-Menü auf einem vertikalen HYSN Menüboard" />
-      <ScreenPanel src="../../assets/imagery/site/board-kicherbowl.png" alt="Kicher-Bowl-Kampagne auf einem vertikalen HYSN Menüboard" />
+      <ScreenPanel src="/assets/imagery/site/board-pizza.png" alt="Pizza- und Dessert-Menü auf einem vertikalen HYSN Menüboard" />
+      <ScreenPanel src="/assets/imagery/site/board-drinks.png" alt="Drinks-Menü auf einem vertikalen HYSN Menüboard" />
+      <ScreenPanel src="/assets/imagery/site/board-kicherbowl.png" alt="Kicher-Bowl-Kampagne auf einem vertikalen HYSN Menüboard" />
     </div>
   );
 }
@@ -131,7 +131,7 @@ function AktionSection() {
             <Icon name="chevron-right" size={34} strokeWidth={2.6} style={{ opacity: .35, width: 'clamp(24px,2.4vw,34px)', height: 'clamp(24px,2.4vw,34px)' }} />
           </span>
           <div style={{ display: 'flex', alignItems: 'center', gap: 'clamp(10px,1.25vw,18px)' }}>
-            <BonusCard img="../../assets/bar-display.png" imgAlt="Bar Display mit Getränke-Motiven" kicker="+ Gratis" title="1x Bar Display" value="499€" />
+            <BonusCard img="/assets/bar-display.png" imgAlt="Bar Display mit Getränke-Motiven" kicker="+ Gratis" title="1x Bar Display" value="499€" />
             <span aria-hidden="true" style={{ width: 'clamp(28px,2.8vw,40px)', height: 'clamp(28px,2.8vw,40px)', borderRadius: '50%', background: 'var(--violet-700)', color: 'var(--white)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 'clamp(16px,1.55vw,22px)', flex: '0 0 auto' }}>+</span>
             <BonusCard icon="monitor-play" kicker="+ 3 Monate" title="Software-Abo gratis" value="450€" />
           </div>

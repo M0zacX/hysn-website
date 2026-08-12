@@ -34,7 +34,7 @@ function ComparisonModern() {
         <div style={{ height: 6, background: 'var(--gradient-brand)' }}></div>
         <div style={{ padding: 'var(--space-5) var(--space-6) var(--space-4)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 'var(--space-4)' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 6, alignItems: 'flex-start' }}>
-            <Wordmark variant="gradient" height={16} base="../.." />
+            <Wordmark variant="gradient" height={16} base="" />
             <span style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 'var(--text-h4)', textTransform: 'uppercase', letterSpacing: 'var(--tracking-label)', color: 'var(--ink-900)' }}>Digital Menüboard</span>
           </div>
           <Badge tone="brand" size="sm">Empfohlen</Badge>
@@ -91,7 +91,7 @@ function WarumSection() {
                   <div style={{ width: '100%', position: 'relative', background: 'linear-gradient(175deg,#3d3d44,#17171b 55%,#0b0b0e)', borderRadius: 9, padding: '4px 4px 13px', boxShadow: '0 30px 44px -22px rgba(0,0,0,.45), 0 10px 18px -12px rgba(0,0,0,.35)' }}>
                     <span style={{ position: 'absolute', inset: '0 0 auto 0', height: 1, borderRadius: '9px 9px 0 0', background: 'rgba(255,255,255,.22)' }}></span>
                     <div style={{ position: 'relative', borderRadius: 5, overflow: 'hidden', background: '#000' }}>
-                      <img src={'../../assets/imagery/site/' + src} alt={alt} style={{ width: '100%', display: 'block' }} />
+                      <img src={'/assets/imagery/site/' + src} alt={alt} style={{ width: '100%', display: 'block' }} />
                       <span style={{ position: 'absolute', inset: 0, background: 'linear-gradient(112deg,rgba(255,255,255,.13) 0%,rgba(255,255,255,.05) 26%,rgba(255,255,255,0) 44%)', pointerEvents: 'none' }}></span>
                     </div>
                     <span style={{ position: 'absolute', left: '50%', bottom: 4, transform: 'translateX(-50%)', fontFamily: 'var(--font-display)', fontWeight: 'var(--weight-bold)', fontSize: 6, letterSpacing: '.22em', color: '#6b6b74', lineHeight: 1 }}>HYSN</span>

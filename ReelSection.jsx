@@ -2,7 +2,7 @@ const { SectionHeading, Eyebrow, Button, Icon } = window.HYSNDesignSystem_e25aa3
 
 /* Portrait reel (9:16). Poster only for now — when the video is uploaded,
    swap the <img> for <video poster={POSTER} src="..." controls playsInline>. */
-const POSTER = '../../assets/imagery/site/showroom-reel-poster.png';
+const POSTER = '/assets/imagery/site/showroom-reel-poster.png';
 
 function ReelSection() {
   return (

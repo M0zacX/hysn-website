@@ -54,7 +54,7 @@ function Hero() {
 
         <div ref={wrap} onMouseMove={onMove} onMouseLeave={onLeave} className="h-visual" data-rv="z" style={{ '--rd': '200ms', position: 'relative', paddingBottom: 'var(--space-8)', order: 1 }}>
           <div style={layer(-7)}>
-            <img src="../../assets/imagery/site/hero-cms-desktop.png" alt="HYSN CMS auf einem Bildschirm im Restaurant: Menüboard bearbeiten"
+            <img src="/assets/imagery/site/hero-cms-desktop.png" alt="HYSN CMS auf einem Bildschirm im Restaurant: Menüboard bearbeiten"
               style={{ width: '100%', height: 420, objectFit: 'cover', display: 'block', borderRadius: 'var(--radius-lg)' }} />
           </div>
           <svg width="112" height="128" viewBox="0 0 120 138" fill="none" aria-hidden="true" style={{ position: 'absolute', left: '68%', bottom: '29.5%', zIndex: 2, overflow: 'visible', filter: 'drop-shadow(0 2px 5px rgba(123,75,196,.4)) drop-shadow(0 0 16px rgba(123,75,196,.3))', ...layer(10) }}>
@@ -69,7 +69,7 @@ function Hero() {
               <span style={{ position: 'absolute', left: '50%', bottom: '100%', transform: 'translateX(-50%)', width: 9, height: 44, background: 'linear-gradient(90deg,#101013,#3c3c43 46%,#101013)', borderRadius: '3px 3px 0 0' }}></span>
               <span style={{ position: 'absolute', left: '50%', top: -3, transform: 'translateX(-50%)', width: 26, height: 5, background: '#0b0b0e', borderRadius: 2 }}></span>
               <div style={{ position: 'relative', borderRadius: 7, overflow: 'hidden', background: '#000' }}>
-                <img src="../../assets/imagery/site/board-cheeseburger-wide.png" alt="Digitales Menüboard mit Cheese Burger Aktion"
+                <img src="/assets/imagery/site/board-cheeseburger-wide.png" alt="Digitales Menüboard mit Cheese Burger Aktion"
                   style={{ width: '100%', display: 'block' }} />
                 <span style={{ position: 'absolute', inset: 0, background: 'linear-gradient(112deg,rgba(255,255,255,.12) 0%,rgba(255,255,255,.04) 24%,rgba(255,255,255,0) 42%)', pointerEvents: 'none' }}></span>
                 <span className="glare"></span>

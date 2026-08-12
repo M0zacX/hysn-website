@@ -1,5 +1,5 @@
 /* Vector recreations of the six HYSN CMS feature illustrations (photos: burgers + video poster only). */
-const FM_IMG = '../../assets/imagery/site/';
+const FM_IMG = '/assets/imagery/site/';
 const fmPanel = (extra) => ({ position: 'relative', height: 186, background: 'var(--white)', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-sm)', overflow: 'hidden', ...extra });
 
 const FM_CSS = `

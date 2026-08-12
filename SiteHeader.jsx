@@ -35,7 +35,7 @@ function SiteHeader() {
       transition: 'background var(--duration-slow) var(--ease-standard), box-shadow var(--duration-slow) var(--ease-standard), border-color var(--duration-slow) var(--ease-standard)',
     }}>
       <div style={{ maxWidth: 'var(--max-width-content)', margin: '0 auto', padding: '14px var(--gutter-page)', display: 'flex', alignItems: 'center', gap: 'var(--space-6)' }} data-nav="site">
-        <a href="#aktion" style={{ display: 'flex' }}><Wordmark variant={scrolled ? 'gradient' : 'white'} height={26} base="../.." /></a>
+        <a href="#aktion" style={{ display: 'flex' }}><Wordmark variant={scrolled ? 'gradient' : 'white'} height={26} base="" /></a>
         <nav style={{ display: 'flex', gap: 'var(--space-6)', marginLeft: 'auto', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
           {LINKS.map(([l, href]) => (
             <a key={l} href={href} className="navlnk"
