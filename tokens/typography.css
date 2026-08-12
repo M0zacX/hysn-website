@@ -1,0 +1,41 @@
+/* HYSN typography. Two families: a heavy neo-grotesque for all-caps display,
+   a geometric sans for everything else. */
+:root{
+  --font-display:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --font-body:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+
+  --weight-light:300;
+  --weight-regular:400;
+  --weight-medium:500;
+  --weight-semibold:600;
+  --weight-bold:700;
+  --weight-extrabold:800;
+  --weight-black:900;
+
+  --text-display-1:88px;
+  --text-display-2:64px;
+  --text-display-3:48px;
+  --text-display-4:36px;
+  --leading-display:1.06;
+  --tracking-display:-0.005em;
+
+  --text-h1:32px;
+  --text-h2:26px;
+  --text-h3:20px;
+  --text-h4:17px;
+  --leading-heading:1.18;
+
+  --text-body-lg:19px;
+  --text-body:16px;
+  --text-body-sm:14px;
+  --text-caption:12px;
+  --leading-body:1.55;
+  --leading-tight:1.35;
+
+  --tracking-eyebrow:0.16em;
+  --tracking-label:0.08em;
+  --tracking-wordmark:0.34em;
+  --text-eyebrow:13px;
+  --text-label:14px;
+}

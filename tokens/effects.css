@@ -1,0 +1,13 @@
+/* Shadows are soft, violet-cast and low-contrast; the brand leans on tinted
+   surfaces rather than heavy elevation. */
+:root{
+  --shadow-xs:0 1px 2px rgba(46,15,82,.06);
+  --shadow-sm:0 2px 8px rgba(46,15,82,.07);
+  --shadow-md:0 6px 20px rgba(46,15,82,.09);
+  --shadow-lg:0 14px 44px rgba(46,15,82,.14);
+  --shadow-screen:0 18px 48px rgba(17,17,25,.28);
+  --shadow-inset-hairline:inset 0 0 0 1px var(--ink-a06);
+  --focus-ring:0 0 0 3px var(--violet-200);
+  --blur-glass:blur(14px); /* @kind other */
+  --backdrop-glass:rgba(255,255,255,.72);
+}

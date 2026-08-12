@@ -1,0 +1,40 @@
+/* Semantic aliases — prefer these in components over the primitives. */
+:root{
+  --text-strong:var(--ink-900);
+  --text-body-color:var(--ink-500);
+  --text-muted:var(--ink-400);
+  --text-accent:var(--violet-700);
+  --text-on-brand:var(--white);
+  --text-on-dark:var(--white);
+  --text-on-dark-muted:rgba(255,255,255,.78);
+
+  --surface-page:var(--white);
+  --surface-page-alt:var(--violet-025);
+  --surface-card:var(--violet-050);
+  --surface-card-plain:var(--white);
+  --surface-sunken:var(--ink-050);
+  --surface-brand:var(--violet-700);
+  --surface-brand-hover:var(--violet-800);
+  --surface-brand-subtle:var(--violet-100);
+  --surface-inverse:var(--ink-900);
+  --surface-footer:#F3EFFD;
+
+  --border-subtle:var(--ink-200);
+  --border-default:var(--ink-a10);
+  --border-brand:var(--violet-200);
+  --border-strong:var(--violet-700);
+
+  --icon-default:var(--violet-700);
+  --icon-muted:var(--ink-400);
+  --icon-on-brand:var(--white);
+
+  --feedback-positive:var(--green-500);
+  --feedback-positive-surface:var(--green-100);
+  --feedback-negative:var(--red-500);
+  --feedback-negative-surface:var(--red-100);
+  --feedback-info:var(--blue-500);
+  --feedback-info-surface:var(--blue-100);
+
+  --link-color:var(--violet-700);
+  --link-color-hover:var(--violet-800);
+}

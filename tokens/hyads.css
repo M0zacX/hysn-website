@@ -1,0 +1,13 @@
+/* HYADS — the DOOH advertising sub-brand (hyads.de). Its own palette:
+   electric blue → magenta on near-black. Taken verbatim from the
+   "HYADS Carousel" export set. Use ONLY on HYADS surfaces, never mixed
+   with the HYSN violet. */
+:root{
+  --hyads-blue:#2943FF;
+  --hyads-magenta:#F41CF4;
+  --hyads-ink:#111111;
+  --hyads-canvas:#ECECF1;
+  --hyads-gradient:linear-gradient(92deg,#2943FF 0%,#F41CF4 100%); /* @kind other */
+  --hyads-gradient-deep:linear-gradient(158deg,#2943FF -12%,#F41CF4 48%,#111111 108%); /* @kind other */
+  --hyads-font:"Poppins",system-ui,sans-serif;
+}

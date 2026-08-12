@@ -1,0 +1,8 @@
+/* HYSN webfonts.
+   SUBSTITUTION NOTICE — no font binaries were supplied with the source material.
+   · Body / UI  : Poppins — confirmed from the HYADS carousel source, which loads
+                  Poppins 400/500/600/700 from Google Fonts.
+   · Display    : Archivo — nearest Google Fonts match to the heavy neo-grotesque
+                  used for all-caps headlines on the HYSN print flyers.
+                  Replace with the real display face when the files are provided. */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Archivo:wght@500;600;700;800;900&display=swap");

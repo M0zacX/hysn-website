@@ -1,0 +1,15 @@
+/* Soft, generous rounding. Feature cards on the flyers are ~14px at print scale;
+   pills and badges are fully round. */
+:root{
+  --radius-xs:4px;
+  --radius-sm:8px;
+  --radius-md:12px;
+  --radius-lg:16px;
+  --radius-xl:22px;
+  --radius-2xl:28px;
+  --radius-pill:999px;
+  --radius-circle:50%;
+  --border-hairline:1px;
+  --border-thick:2px;
+  --border-dashed:2px dashed var(--violet-300); /* @kind other */
+}

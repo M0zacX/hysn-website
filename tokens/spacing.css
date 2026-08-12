@@ -1,0 +1,21 @@
+/* 4px base step. Print layouts sit on generous 40–80px gutters. */
+:root{
+  --space-0:0px;
+  --space-1:4px;
+  --space-2:8px;
+  --space-3:12px;
+  --space-4:16px;
+  --space-5:20px;
+  --space-6:24px;
+  --space-7:32px;
+  --space-8:40px;
+  --space-9:48px;
+  --space-10:64px;
+  --space-11:80px;
+  --space-12:112px;
+
+  --gutter-page:40px;
+  --gutter-page-lg:80px;
+  --max-width-prose:62ch;
+  --max-width-content:1120px;
+}
