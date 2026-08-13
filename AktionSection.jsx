@@ -16,11 +16,15 @@ const PAKET = [
   ['shield-check', '5 Jahre Garantie', 'Läuft nicht? Wir tauschen.'],
 ];
 
-function ScreenPanel({ src, alt }) {
+function ScreenPanel({ video, poster, alt }) {
+  const media = { position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 50%' };
   return (
     <div style={{ position: 'relative', flex: '1 1 0', background: '#26262b', borderRadius: 2, padding: 3, boxShadow: '0 40px 70px -26px rgba(0,0,0,.66)' }}>
       <div style={{ position: 'relative', borderRadius: 0, overflow: 'hidden', background: 'var(--ink-900)', aspectRatio: '9/16' }}>
-        <img src={src} alt={alt} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 50%' }} />
+        <video autoPlay muted loop playsInline preload="metadata" poster={poster} aria-label={alt} style={media}>
+          <source src={video + '.mp4'} type="video/mp4" />
+          <source src={video + '.webm'} type="video/webm" />
+        </video>
         <span style={{ position: 'absolute', inset: 0, background: 'linear-gradient(112deg,rgba(255,255,255,.09) 0%,rgba(255,255,255,.03) 24%,rgba(255,255,255,0) 42%)', pointerEvents: 'none' }}></span>
         <span className="glare"></span>
       </div>
@@ -31,9 +35,9 @@ function ScreenPanel({ src, alt }) {
 function OfferBoard() {
   return (
     <div style={{ display: 'flex', gap: 'clamp(5px,0.6vw,9px)', alignItems: 'stretch' }}>
-      <ScreenPanel src="/assets/imagery/site/board-pizza.png" alt="Pizza- und Dessert-Menü auf einem vertikalen HYSN Menüboard" />
-      <ScreenPanel src="/assets/imagery/site/board-drinks.png" alt="Drinks-Menü auf einem vertikalen HYSN Menüboard" />
-      <ScreenPanel src="/assets/imagery/site/board-kicherbowl.png" alt="Kicher-Bowl-Kampagne auf einem vertikalen HYSN Menüboard" />
+      <ScreenPanel video="/assets/imagery/site/board-pizza" poster="/assets/imagery/site/board-pizza.png" alt="Pizza- und Dessert-Menü auf einem vertikalen HYSN Menüboard" />
+      <ScreenPanel video="/assets/imagery/site/board-drinks" poster="/assets/imagery/site/board-drinks.png" alt="Drinks-Menü auf einem vertikalen HYSN Menüboard" />
+      <ScreenPanel video="/assets/imagery/site/board-kicherbowl" poster="/assets/imagery/site/board-kicherbowl.png" alt="Kicher-Bowl-Kampagne auf einem vertikalen HYSN Menüboard" />
     </div>
   );
 }
