@@ -3,6 +3,23 @@ const { SectionHeading, Button, Icon, Card } = window.HYSNDesignSystem_e25aa3;
 function ContactSection() {
   const [sent, setSent] = React.useState(false);
   const [promo, setPromo] = React.useState(false);
+  const [sending, setSending] = React.useState(false);
+  const [error, setError] = React.useState('');
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (sending) return;
+    setSending(true); setError('');
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(e.target) });
+      const data = await res.json();
+      if (data.success) setSent(true);
+      else setError('Senden fehlgeschlagen. Bitte versuchen Sie es erneut oder schreiben Sie an info@hysn.de.');
+    } catch (err) {
+      setError('Netzwerkfehler. Bitte versuchen Sie es erneut oder schreiben Sie an info@hysn.de.');
+    } finally {
+      setSending(false);
+    }
+  };
   const field = {
     width: '100%', boxSizing: 'border-box', padding: '12px 14px',
     border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-sm)',
@@ -48,25 +65,30 @@ function ContactSection() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={(e) => { e.preventDefault(); setSent(true); }} style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
-                <input className="fld" style={field} placeholder="Betrieb" required />
-                <input className="fld" style={field} placeholder="Ihr Name" required />
+              <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
+                <input type="hidden" name="access_key" value="4d673cdc-5b50-4247-bc90-da862c723efd" />
+                <input type="hidden" name="subject" value="Neue Beratungsanfrage – HYSN Website" />
+                <input type="hidden" name="from_name" value="HYSN Website" />
+                <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" style={{ display: 'none' }} />
+                <input className="fld" style={field} name="Betrieb" placeholder="Betrieb" required />
+                <input className="fld" style={field} name="Name" placeholder="Ihr Name" required />
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-4)' }}>
-                  <input className="fld" style={field} type="email" placeholder="E-Mail" required />
-                  <input className="fld" style={field} type="tel" placeholder="Telefon" required />
+                  <input className="fld" style={field} name="E-Mail" type="email" placeholder="E-Mail" required />
+                  <input className="fld" style={field} name="Telefon" type="tel" placeholder="Telefon" required />
                 </div>
-                <textarea className="fld" style={{ ...field, minHeight: 96, resize: 'vertical' }} placeholder="Wie viele Bildschirme benötigen Sie?" />
+                <textarea className="fld" style={{ ...field, minHeight: 96, resize: 'vertical' }} name="Nachricht" placeholder="Wie viele Bildschirme benötigen Sie?" />
                 {promo ? (
                   <div className="pop" style={{ position: 'relative' }}>
                     <Icon name="tag" size={16} color="var(--violet-700)" style={{ position: 'absolute', left: 14, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }} />
-                    <input className="fld" style={{ ...field, paddingLeft: 40, textTransform: 'uppercase', letterSpacing: '.06em' }} placeholder="Aktionscode" autoFocus />
+                    <input className="fld" style={{ ...field, paddingLeft: 40, textTransform: 'uppercase', letterSpacing: '.06em' }} name="Aktionscode" placeholder="Aktionscode" autoFocus />
                   </div>
                 ) : (
                   <button type="button" onClick={() => setPromo(true)} style={{ all: 'unset', cursor: 'pointer', alignSelf: 'flex-start', display: 'inline-flex', alignItems: 'center', gap: 6, fontFamily: 'var(--font-body)', fontSize: 'var(--text-body-sm)', fontWeight: 600, color: 'var(--violet-700)' }}>
                     <Icon name="tag" size={15} />Sie haben einen Aktionscode?
                   </button>
                 )}
-                <Button size="md" fullWidth type="submit">Beratung anfragen</Button>
+                {error && <span style={{ fontSize: 'var(--text-body-sm)', color: 'var(--red-600)' }}>{error}</span>}
+                <Button size="md" fullWidth type="submit" disabled={sending}>{sending ? 'Wird gesendet…' : 'Beratung anfragen'}</Button>
                 <span style={{ fontSize: 'var(--text-caption)', color: 'var(--ink-400)' }}>
                   Alle Preise zzgl. MwSt. Montage im Umkreis von 50 km inklusive.
                 </span>
