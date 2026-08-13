@@ -1,20 +1,32 @@
 const { SectionHeading, Eyebrow, Button, Icon } = window.HYSNDesignSystem_e25aa3;
 
-/* Portrait reel (9:16). Poster only for now — when the video is uploaded,
-   swap the <img> for <video poster={POSTER} src="..." controls playsInline>. */
+/* Portrait reel (9:16). Poster until the visitor clicks play, then the
+   Vimeo player loads and autoplays (with sound, since the click is a gesture). */
 const POSTER = '/assets/imagery/site/showroom-reel-poster.png';
+const VIMEO_ID = '1218151541';
 
 function ReelSection() {
+  const [playing, setPlaying] = React.useState(false);
   return (
     <section id="showroom" data-screen-label="Showroom" style={{ background: 'var(--white)' }}>
       <div style={{ maxWidth: 'var(--max-width-content)', margin: '0 auto', padding: 'var(--space-10) var(--gutter-page)', display: 'grid', gridTemplateColumns: 'minmax(0,420px) minmax(0,1fr)', gap: 'var(--space-9)', alignItems: 'center' }} data-grid="reel">
-        <div data-rv="z" className="reel" style={{ position: 'relative', maxWidth: 360, width: '100%', justifySelf: 'center', aspectRatio: '9/16', borderRadius: 'var(--radius-xl)', overflow: 'hidden', boxShadow: 'var(--shadow-screen)', background: 'var(--ink-900)', cursor: 'pointer' }}>
+        <div data-rv="z" className="reel" onClick={() => setPlaying(true)} role="button" aria-label="Showroom-Video abspielen" style={{ position: 'relative', maxWidth: 360, width: '100%', justifySelf: 'center', aspectRatio: '9/16', borderRadius: 'var(--radius-xl)', overflow: 'hidden', boxShadow: 'var(--shadow-screen)', background: 'var(--ink-900)', cursor: 'pointer' }}>
+          {playing ? (
+            <iframe
+              src={`https://player.vimeo.com/video/${VIMEO_ID}?autoplay=1&title=0&byline=0&portrait=0&badge=0&app_id=58479`}
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              referrerPolicy="strict-origin-when-cross-origin"
+              title="HYSN Showroom"
+              style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0 }}
+            />
+          ) : (<>
           <img src={POSTER} alt="Rundgang durch den HYSN Showroom: Menüboards an der Wand, Bar Display in der Hand" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
           <span style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(17,17,17,.14)' }}>
             <span className="play" style={{ width: 64, height: 64, borderRadius: '50%', background: 'rgba(255,255,255,.92)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', boxShadow: 'var(--shadow-lg)' }}>
               <Icon name="play" size={26} color="var(--violet-700)" strokeWidth={2.2} style={{ marginLeft: 3 }} />
             </span>
           </span>
+          </>)}
         </div>
         <div data-rv style={{ '--rd': '120ms', display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
           <Eyebrow>Ansprechpartner vor Ort</Eyebrow>
