@@ -66,7 +66,7 @@ function ContactSection() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
-                <input type="hidden" name="access_key" value="4d673cdc-5b50-4247-bc90-da862c723efd" />
+                <input type="hidden" name="access_key" value="25686f81-5096-4160-94ea-51df27ea9d99" />
                 <input type="hidden" name="subject" value="Neue Beratungsanfrage – HYSN Website" />
                 <input type="hidden" name="from_name" value="HYSN Website" />
                 <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" style={{ display: 'none' }} />
